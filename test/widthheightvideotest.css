@@ -1,0 +1,14 @@
+
+
+.wrap {
+    overflow:hidden;
+    width:500px;
+    height:400px;
+    border:1px solid red;   
+}
+.video {
+    overflow:hidden;
+    width:250px; /* this is the orginal W before change */
+    height:18px; /* this is the orginal H before change */
+    border:1px solid blue;
+}
