@@ -12,3 +12,38 @@
     height:18px; /* this is the orginal H before change */
     border:1px solid blue;
 }
+
+
+
+
+        
+.wrap {
+    overflow:hidden;
+    width:500px;
+    height:400px;
+    border:1px solid red;   
+}
+.video {
+    overflow:hidden;
+    width:250px; /* this is the orginal W before change */
+    height:18px; /* this is the orginal H before change */
+
+    border:1px solid blue;
+}
+
+/*
+  #FSFeaturedVideo .videoContainer //the wrapper
+  #rich_embed_1201890494 //id in the object video
+  */
+
+  .vxp_richEmbedContainer OBJECT {
+    visibility: visible !important;
+   /*  width:500px;
+    height:400px;*/
+    float:left;
+    margin-top:-47px;
+}
+
+.wrap .vxp_richEmbedContainer OBJECT{
+    margin-top:0px;
+}

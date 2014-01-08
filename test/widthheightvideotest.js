@@ -1,11 +1,11 @@
-
+  
 var widthheightvideotest = (function (proto) {
 
   proto = {
     loadResponsiveVideo : function () {
       var options = {
-        playListQuery : "videobyuuids.aspx?uuids=b464b082-6561-47c2-9d01-f2b0ba810172", 
-        mostViewedPlayListQuery: "videobytag.aspx?mk=us&vs=2&ns=Fox%20Sports_Gallery&tag=top%20news&ipt=1&responseEncoding=json", 
+        playListQuery : "videobyuuids.aspx?uuids=b464b082-6561-47c2-9d01-f2b0ba810172",
+        mostViewedPlayListQuery: "videobytag.aspx?mk=us&vs=2&ns=Fox%20Sports_Gallery&tag=top%20news&ipt=1&responseEncoding=json",
         autoplay: true
       };
 
@@ -22,9 +22,14 @@ var widthheightvideotest = (function (proto) {
       //wrapper
       var wH = $(".wrap").height();
       var wW = $(".wrap").width();
-      //video
-      var videoH = $(".video").height(wH - 2); /* '-2' is optional to avoid the overflow if you want to see the edges. i added this -2 because i gave the borders 1px on both divs so you can see whats happening */
-      var videoW = $(".video").width(wW - 2); /* '-2' is optional to avoid the overflow if you want to see the edges.  i added this -2 because i gave the borders 1px on both divs so you can see whats happening */
+     
+    //  .height(wH - 2); /* '-2' is optional to avoid the overflow if you want to see the edges. i added this -2 because i gave the borders 1px on both divs so you can see whats happening */
+    //  .width(wW - 2); /* '-2' is optional to avoid the overflow if you want to see the edges. i added this -2 because i gave the borders 1px on both divs so you can see whats happening */
+    //the real json video object
+    
+     var videoObj_H = $(".wrap .vxp_richEmbedContainer OBJECT ").height(wH); //may need to chain some css for the margin because the add in between videos
+     var videoObj_W = $(".wrap .vxp_richEmbedContainer OBJECT ").width(wW);
+    
     },
       
     connect : function () {
