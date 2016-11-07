@@ -1,4 +1,4 @@
-/* clone test */
+/* clone test. */
 /*
 define('components/video', ['jquery', 'http://img1.video.s-msn.com/s/js/vxp_min.js'], function($) {
 
