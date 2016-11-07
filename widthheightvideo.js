@@ -1,4 +1,8 @@
 /* clone test. */
+
+/* commited a comment test for "git push" from andre pc at home */
+
+
 /*
 define('components/video', ['jquery', 'http://img1.video.s-msn.com/s/js/vxp_min.js'], function($) {
 
