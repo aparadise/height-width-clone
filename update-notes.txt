@@ -1,0 +1,436 @@
+Commands for unix
+
+1) ls -l (this will list all the directorys by a FULL detal view with date, size and name. however 'ls -al' will do the same but show hidden files )
+
+2) ls -al (will show all file details including hidden files. however 'ls -l' WILL not show hidden files)
+
+3) ls (this will give full file list of the names in directory only)
+
+4) To change a file name type: $ mv fileName (space) newFileName
+
+5) $ git log (this will show you the  history of the files)  (note depending your unix editor you can just type "q" to escape out of the log view)
+
+6) $ git log --oneline (this is a much simple cleaner look at the FULL log history of ALL COMMITED FILES.)
+
+7) $ git init (this is how you create a NEW git repository.) 
+
+8) use the vi editor to edit in the terminal type: vi FileName
+
+9) $ git commit -am "message name" (fast way to commit a file is called "express commit")
+
+10) type: $ cat FileName (this will show you the file contents without having to use the VI editor)
+
+11) $ git checkout -b new-Branch-Name (to add a new branch AFTER you detach a file from head to make changes)
+
+12) $ git add . (return/enter)(note--- if you use git '$ git add .' you will add ALL the files that are in the staging area) $ git commit -m "some message"
+
+13) how to "revert" a commited file. type: $ git revert HEAD (this will auto open VI editor to make changes)
+
+14) to remove a file in unix type: rm file-name
+
+15) $ git reset --hard file-ID (this will reset the head at the the file-ID that you choose from the reset --hard) 
+
+16) $ git init (this is how you make github working directory after you have made a new folder)
+
+17) $ touch new-File-Name (type the 'touch' command to quickly add a new file instead of the VI editor)
+
+
+18) note: you TAG a file by adding it to your staging area type: $ git add file-Name
+
+19)  $ git clean -n ("-n" is only warning to let you know that it will show you what files will be removed before acutally removing the untracked files)
+
+20)  $ git clean -f (this actually will remove the untracked file. "-f" means force flag.)
+
+21) $ git clean -f <path-name> (this will clean all untracked files located in that FILES FOLDER ONLY)
+
+22) $ git clean -df (the will removes all tracked and untracked files in the current directory)
+
+23)  $ git clean -xf (this is for deleting files that are set to "ignore" in git.)
+
+
+24) ls -al (will show all file details including hidden files. however 'ls -l' WILL not show hidden files)
+
+25) git clone url (this is the url from github repo)
+
+26) git pull origin master
+
+27) git push origin master
+
+note 26 & 27 "git pull origin master" means... "origin" is the remote repository and "master" points to the master branch of the remote repository.
+and...  "git push origin master" means ... "origin" refers to the remote repository and "master" refers to the master branch of your local repository
+
+28)
+
+
+********************Unzip a file **********
+
+$ unzip yourFile.zip
+
+*********remove a file *************
+
+$ rm Filename
+
+**********to make a NEW directory folder ***********
+
+$ mkdir newDirectoryName
+
+****Copy Files to another locaction *********
+
+$ cp -rf theFilesYouWant2CopyName/* NewDirectoryToPasteLocation/
+
+********create NEW git repository ********
+
+$ git init
+
+********** to check the status before adding files *********
+
+$ git status
+(if its red color then you need to make a decision if you want to add the red uncommited file)
+
+******add the files to the directory *******
+
+$ git add .
+
+(this add ALL of your files. once you see your files are now green by checking the '$ git status' after you have added the files you now need to leave a committed message.
+
+type: $ git commit -m "your messages"
+
+*********faster way to add files and leave a message at one time instead of two steps use the "EXPRESS COMMIt" ****
+
+ type: $ git commit -am "message name"
+
+
+**********SPECIAL NOTE****
+If you '$ git status' and you get "CLEAN" message that a good sign meaning there is nothing has been touched and everthing
+has been commited.
+
+***********VI Editor ************
+1) in unix type 'vi' then a makeup a "file name"
+2) once inside of vi type "i" for this will all allow you insert text into the vi.
+3) once done hit the "esc' key twice and type ":wq" this will allow you to save the file.
+
+4) then to check the file to see if its added type '$ cat filleName' (hit enter/return) and '$ git log --oneline' or '$ git status'
+
+
+*************************
+
+******add files to github ***********
+
+1) $ git status (this will show all files that has not been commited (this show you the branch our one and the status of files)
+(the file status will always be in RED)
+
+2) $ git add fileName (enter/return) (this how you add file)
+
+3) type: '$ git status'  or '$ git status -s' (enter/return) (now you will see the GREEN fileName that was added and RED files that has not been added)
+
+4) To remove the file that you added type: $ git rm --cached fileName (enter/return) then type: $ git status (you should now see  your file in RED)
+
+5) to finalize a commited file (after step 3). type: $ git commit -m "message" (yes you must type "some message" after -m. this for comments for a commit)
+
+--> note: you can also type: $ git status -s (this will give a better look of files that has not been commited. 
+It will show you a RED "?" or GREEN "A" or RED "M" If its GREEN "M" that mean is was modified and added. A RED "D" means deleted.
+ 
+****************
+
+
+
+*****Copying a GitHub Respoitory******
+
+when you "Fork" someones project you clone it to YOUR github accout.
+once you copy the forked url from your github account do the following steps to in the unix terminal to copy it down to your local.
+
+
+1) $ cd <project_directory>
+2) $ git clone (or just copy/paste the url) https://github.com/<user>/<project_name>
+3) $ cd <project name>
+4) ls -al
+
+note: if you do 'ls -al' in the directory and you see '.git' that means it has been successfully cloned into your repository.
+*******************************
+
+****moving files into a github***
+
+1) Modified
+2) Staged
+3) Commited
+
+****************
+
+**** how to check the status of the repository by using $ git status -s ***
+
+you can also type: $ git status -s (this will give a better look of files that has not been commited. 
+It will show you a RED "?" or GREEN "A" or RED "M" If its GREEN "M" that mean is was modified and added. A RED "D" means deleted.
+
+also if you need to change a file name type: $ mv fileName (space) newFileName.
+
+*************************************************
+
+********* git log commands *****
+
+there are 5 ways to git log views
+
+1) $ git log (this will show you the  history of the files)  (note depending your unix editor you can just type "q" to escape out of the log view)
+
+2) a much simple cleaner look is type: $ git log --oneline
+
+3) see only the log history of one file type: $ git log fileName
+
+4) to view all logs for one files history by date by grabbing typing the commited ID number type: $ git log 88888..99999 --oneline
+
+5) to view only the last 3 commits for example type: $ git log -n 3 --oneline
+
+
+***** Branching ***
+
+1) to see the branches type: $ git branch
+
+2) to make a branch type: $ git branch nameOfNewBranch
+
+3) to check out a branch or switch to a different branch type: $ git checkout nameOftheBranch
+
+branches will inhirit ALL files from the MASTER branch but new files created in the checkedout branch will on go into that current branch until its pushed to the master branch.
+
+note: a cyle for a branch looks like this:
+
+Master (final bug free files)
+Release (testing before pushed to master)
+Development (is where developers can work together and the Release branch can be created from the development branch)
+Feature (this branch is only for new features)
+Feature (this branch is only for new features)
+
+*****************************
+
+*****github CHECKOUT commands ***
+
+You can use a checkout to: checkout files, branches and commits.
+ 
+A) How to checkout a COMMIT
+
+  1) type: $ git checkout YourCommited-ID
+
+  2) to see the history of the commited files type: "git log --oneline"
+
+  (note: when all of the commited files are shown the top most current commited file is called "THE HEAD"
+
+  3) $ git checkout IDnameOfcommitedFile  (once you do this the files is now called the "detached head". 
+
+  Once you do a desatched head. then thee working file come your. YOu can make exprential changes to them, and you can discard any   commits without impacting any changes)
+
+  4) now if you want to checkout a file and place it in a NEW BRANCH! type: $ git checkout -b newBranchName
+
+  5) If you want to create a new branch to retain the new commits type: $ git checkout -b NewBranchName
+
+
+B) How to CHECKOUT a branch
+
+   1) type: $ git checkout master (this will tell what the head posisiton file is in your branch. to see the commited order type:       $ git log --oneline )
+  
+   2) If i want checkout any file from current branch that I am in type: $ git checkout ID-name (note: when you do this you will 
+     see a message that say... you are in "detached HEAD" state. this means you can look around in the file and make experimental      changes and commit them, and you can discard any commits you make in this state without impacting any other branches by          perfroming another checkout.  Now from here you can also create a new branch to retain commits you create, you may do so (now     or later) by     typing: $ git checkout -b new-Branch-Name)
+
+    note: once detach file from the head and then type '$ git log --oneline' you notice that you are NOW only able to see files
+   up to the detached file in the head. So you should see less amount of files in the log view.
+
+3) after you make changes to a file that is checked out commit the file type: $ git -am "message information" 
+   you will now see message telling you how many files have chagned and how many lined where (+) added or (-) subtracted.
+
+  note: once you add the new changes from the checked out detached file try and run checkout the branch again type: $ git checkout  master you will get a WARNING MESSAGE saying your are about to leave 1 commit behind. If you to keep the changes you must make new branch so you would have to type: $ git checkout -b new-Branch-Name.
+
+4) VERY IMPORTANT... now if you want to actual do a '$ git checkout ID file-name' and now you want to update the current branch to save those changes YOU MUST combine file-ID and the Name of the file. type: $ git checkout ID fileName (once you have done do a '$ git status' to see what the file done.
+
+5) VERY IMPORTANT... now if i dont want to commit the file after i its done "$ git checkout ID file-name" i can type: $ git checkout HEAD file-name (then type: '$ git status' i should get a message that says 'nothing to commit, working diretory clean')
+
+6) when you run a 'checkout'command it automatically addes the file to the staging area so you just have to run '-m' command to leave a mesage. $ git commit -m "some message"
+
+7) how to "revert" a commited file. type: $ git revert HEAD (this will auto open VI editor to make changes)
+note: what the commit "revert" does is removes the commited snapshot.
+
+8) "git revert HEAD" command does the following.. reverts current commit but introduces a new commit for the reversal.
+
+Note: get revert IS A SAFE WAY to undo changes.
+
+************git RESET command *********
+
+Note: get reset is a VERY DANGEROUS way to do changes. When you use "$ git reset" its permanent change YOU CAN NOT go back change it again.
+
+NOte: The Rule ONLY use '$ git reset' on your local files NEVER where other developers are sharing on stage/master 
+
+1) $ git reset
+
+(you will use reset when you make change on a file and you add it before leaving a message)
+
+2) $ git reset --hard (this will remove the modified file from the HEAD of the stage. do 'git status' to see a clean dirctory)
+(not only did it remove the changes in STAGING area but ALSO modified the work in WORKING directory to match the most recent changes)
+
+3) $ git reset --hard file-ID (this will reset the head at the the file-ID that you choose from the reset --hard) 
+
+**********git clean ************
+ git clean removes UNSTRACKED FILES from your working directory.
+
+ git clean commans is NOT UNCHANGLALBE so make sure your 100% sure you want to do this.
+
+note: git "reset" ONLY works on "TRACKED" files but git "clean" ONLY work on "UNTRACKED" files.
+
+note: git 'clean' and git '--hard' allows you to reset the working directory back to its orginal state.
+
+1)  $ git clean -n ("-n" is only warning to let you know that it will show you what files will be removed before acutally removing the untracked files)
+
+2)  $ git clean -f (this actually will remove the untracked file. "-f" means force flag.)
+
+
+3) $ git clean -f <path-name> (this will clean all files located in that FILES FOLDER ONLY)
+
+4) $ git clean -df (the will removes all tracked and untracked files in the current directory)
+ 
+
+5) $ git clean -xf (this is for deleting files that are set to "ignore" in git.)
+
+******Pushing files to github *****
+
+"git pull" and "git push"
+
+note: always to a git pull before a git push
+
+1) git pull = you pull all of the latest code to your local/remote working area repository
+
+2) git push = you push all of your code to the remote repository
+
+3) git clone url (this will clone and download a file from github)( # cloning generally sets up both the names "origin and master" for you automatically )
+
+4) git pull origin master (this is how you pull and updated github repository, but YOU MUST be in the same directory that on your local that your pulling from in github )
+
+(note rememeber anytime you a file change OF ANY KIND... ALWAYS do a " git status ", then if it looks okay do a 'git add' then do a 'git commit -m "your message" )
+
+5) git pull origin master (this will push the commited files to the github repository)
+ --->once you hit return github will ask for you user/psw so know it so you can type it.
+ --->Once the user/psw has been successful got to the github browser and hit refresh the page and you should see the new push changes.
+---> note: if you and someone else from your team does a push on the same file to the repository the first person who pushes wins. So the 2nd persons file will be rejected and will
+be forced to do 'pull' request to get the updates changes first. then you must check the file to see any differences so you can 'push' the file back.
+
+always know...
+"git pull origin master" means... "origin" is the remote repository and "master" points to the master branch of the remote repository
+and...  "git push origin master" means ... "origin" refers to the remote repository and "master" refers to the master branch of your local repository
+
+
+******************SSH ***********
+
+--> SSH keys are way to identify a trusted computer.
+
+--> generate public/private key pair
+
+--> public keys are meant to share publicly
+
+--> private keys are meant to be kept private to yourself.
+
+to check for ssh on your folders type:  ls -l ~/.ssh
+
+example key file would look like: id_rsa (this would be private key) and id_rsa.pub (this would be public key)
+
+--> you can delete the .ssh keys by typing: rm -rf .ssh (now onc the keys are deleted you can make your own keys)
+
+--> Generate and SSH Keys - RSA
+
+(RSA acronym: Ron Rivest Adi, Shamir, and Leonard Aldeman)
+(Cryptosystem: one of the first practical public key cryptosystems)
+(RSA Key Length: min length 768 bits; default length: 2048 bits)
+
+
+to make my own sshe key:
+step 1) ssh-keygen -t rsa -b 4096 -C "key pair generation demo"
+
+step 2) you will need to set up password. you can actually just hit return to make it blank for no psw. (once you hit return you will see the SSh finger print key for the SHA256 hash and you will see the public and private key name files made.)
+
+step 3) $ eval "$(ssh-agent -s)"   (this will give you process ID)
+
+step 4) $ ssh-add ~/.ssh/id_rsa.pub
+
+step 5) the password you created will be asked. (one this step is done you have successfully added the key to the ssh agent)
+
+step 6) now add the SSH key to the github account. type: $ clip < ~/.ssh/id_rsa.pub
+
+step 7) go to the github website and click on "setting" and pick "ssh-key" link, then click "new ssh key"
+The "title" input box will show and you need to giv it a name. Then in the "key" input box type right click and it paste. next hit the button "Add SSh Key", then hit the "Confirm psw" button. I should see the fingerprint key now added to github.
+
+Note: $ ssh -T -p 443 git@github.com (this to login now form the unix prompt)
+ 
+---------RECAP SSH NOTES---------
+
+Command Summary (GitHub via SSH)
+Section 10, Lecture 53
+
+Checking existing SSH Keys
+
+$ ls -al ~/.ssh         # Lists the files in your .ssh directory, if they exist
+
+
+Generate an SSH Key
+
+# Generates public/private rsa key pair with default values - DON'T RUN THIS ONE
+$ ssh-keygen           
+
+ # 't' for type of key, 'b' for length of key, 'C' for comment for maintaining multiple keys                                
+$ ssh-keygen -t rsa -b 2048 - C "home machine"
+
+        
+
+Enable SSH Agent & add the SSH Key to the agent
+
+# start the ssh-agent in the background
+$ eval "$(ssh-agent -s)"        
+
+# Add your SSH key to the ssh-agent    
+$ ssh-add ~/.ssh/id_rsa.pub           
+
+
+Testing SSH connection
+
+# Verify SSH connection; here 'git" is the user name; note that you cannot use your github user name such as 'william'
+$ ssh -T git@github.com                 
+
+# another alternative way to verify if firewall issues are present
+$ ssh -T -p 443 git@github.com          
+
+
+Remote URL switching and SSH push
+
+# List your existing remotes in order to get the name of the remote you want to change
+$ git remote -v      
+
+ # set remote URL
+$ git git remote set-url origin git@github.com:USERNAME/OTHERREPOSITORY.git       
+
+ # Verify new remote URL  
+$ git remote -v                                
+
+
+Changing passphrase
+
+# for changing password occasionally
+$ ssh-keygen -p    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
