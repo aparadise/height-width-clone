@@ -1,5 +1,8 @@
 Commands for unix
 
+http://stackoverflow.com/questions/7438313/pushing-to-git-returning-error-code-403-fatal-http-request-failed
+(this link is to fix my push/pull 403 erro)
+
 1) ls -l (this will list all the directorys by a FULL detal view with date, size and name. however 'ls -al' will do the same but show hidden files )
 
 2) ls -al (will show all file details including hidden files. however 'ls -l' WILL not show hidden files)
