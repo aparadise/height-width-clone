@@ -2,3 +2,8 @@ my first -  merge test 1. now try
 my second line to test to see the diff
 3rd line
 fourth line
+5th line will be for hiring.
+
+sixth product launched
+
+seventh line of text 
