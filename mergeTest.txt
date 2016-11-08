@@ -1,1 +1,4 @@
-my first merge test 1
+my first -  merge test 1. now try
+my second line to test to see the diff
+3rd line
+
